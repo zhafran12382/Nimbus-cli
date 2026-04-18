@@ -117,7 +117,7 @@ def load_config() -> dict:
     return {
         "provider": "openrouter",
         "model": "google/gemma-4-31b-it:free",
-        "search_engine": "duckduckgo",
+        "search_engine": "tavily",
     }
 
 
