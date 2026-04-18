@@ -223,9 +223,7 @@ def cmd_setup():
         t_key = questionary.password("Enter Tavily API key:").ask()
         if t_key:
             save_api_key("TAVILY_API_KEY", t_key)
-        config["search_engine"] = "tavily"
-    else:
-        config["search_engine"] = "tavily"
+    config["search_engine"] = "tavily"
 
     save_config(config)
     console.print("\n[bold]Setup complete![/bold]")

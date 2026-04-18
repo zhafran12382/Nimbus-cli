@@ -10,6 +10,7 @@ from skills.base import BaseSkill
 
 class WebSearch(BaseSkill):
     name = "web_search"
+    REQUEST_TIMEOUT_SECONDS = 30
     description = (
         "Search the web for current information. Use this when you need up-to-date facts, "
         "recent news, documentation, or any information you don't already know. "
@@ -48,7 +49,7 @@ class WebSearch(BaseSkill):
                     "query": query,
                     "max_results": max_results,
                 },
-                timeout=30,
+                timeout=self.REQUEST_TIMEOUT_SECONDS,
             )
             response.raise_for_status()
             data = response.json()
