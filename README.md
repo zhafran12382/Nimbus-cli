@@ -10,7 +10,7 @@ Nimbus was built to solve the frustration of having to copy-paste code back and 
 It's entirely text-based, lightning fast, and optimized to run anywhere—from your main workstation down to Termux on an Android phone.
 
 ## Features that matter
-- **Local Tool Execution:** The AI can read your directory tree, modify files, run bash/powershell commands, and search the web (via Tavily or DuckDuckGo).
+- **Local Tool Execution:** The AI can read your directory tree, modify files, run bash/powershell commands, and search the web (via Tavily).
 - **NimbusTeam (Multi-Agent):** Break down monolithic tasks. Create a 3-tier hierarchy (Boss -> Managers -> Workers) to divide and conquer massive codebase refactors or heavy research.
 - **Strict Custom Routing:** Save money on OpenRouter by manually specifying your primary and fallback providers. Nimbus strictly validates your custom routing so you don't accidentally burn credits.
 - **Session Memory:** Don't lose your context. Save, load, and compact your AI's memory states directly to disk.

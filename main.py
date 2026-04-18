@@ -216,17 +216,16 @@ def cmd_setup():
             config["openrouter_routing"] = ""
 
     # Tavily key
-    console.print("\n[dim]- Tavily provides higher-quality web search results.[/dim]")
-    console.print("[dim]- DuckDuckGo is used as a free fallback if no key is provided.[/dim]")
+    console.print("\n[dim]- Web search uses Tavily API.[/dim]")
     set_tavily = questionary.confirm("Configure Tavily API key for web search?").ask()
     
     if set_tavily:
         t_key = questionary.password("Enter Tavily API key:").ask()
         if t_key:
             save_api_key("TAVILY_API_KEY", t_key)
-            config["search_engine"] = "tavily"
+        config["search_engine"] = "tavily"
     else:
-        config["search_engine"] = "duckduckgo"
+        config["search_engine"] = "tavily"
 
     save_config(config)
     console.print("\n[bold]Setup complete![/bold]")
@@ -243,7 +242,7 @@ def cmd_config():
 
     table.add_row("Provider", PROVIDERS.get(config.get("provider", ""), {}).get("name", config.get("provider", "N/A")))
     table.add_row("Model", config.get("model", "N/A"))
-    table.add_row("Search Engine", config.get("search_engine", "duckduckgo"))
+    table.add_row("Search Engine", config.get("search_engine", "tavily"))
     table.add_row("Config Dir", str(CONFIG_DIR))
 
     console.print(table)
