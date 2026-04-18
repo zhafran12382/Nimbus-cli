@@ -21,7 +21,7 @@ You just need Python 3 and some API keys.
 
 1. Clone the repo and install dependencies:
 ```bash
-git clone https://github.com/zhafran12382/NimbusCLI.git
+git clone https://github.com/zhafran12382/Nimbus-cli.git
 cd NimbusCLI
 
 pip install -r requirements.txt
